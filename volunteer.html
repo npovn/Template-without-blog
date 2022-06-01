@@ -1,0 +1,243 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latibule of the Heart</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    </script>
+    <script> 
+        $(function(){
+        $("#header").load("headerBlack.html"); 
+        $("#footer").load("footer.html"); 
+        });
+    </script> 
+    <link rel="icon" href="Assets/Images/LogoTrans.png">
+    <style>
+        @font-face {
+    font-family: Briko;
+    src: url(Assets/Fonts/Briko.ttf);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(Assets/Fonts/Oswald.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    padding-bottom: 100px;
+    margin-bottom: 78vh;
+}
+
+.home{
+    width: 100vw; 
+    height: 100vh;
+    transform: translateZ(0);
+    overflow: hidden;
+    position: absolute;
+    background: linear-gradient(#F1A3D2, #ABD9EF);
+}
+
+.backgroundcover{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    background: rgba(53, 53, 53, 0.8);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.parallax{
+    position: fixed;
+    float: right;
+    margin: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Title */
+.title{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
+    color: rgb(255, 210, 216);
+    margin-left: 20px;
+}
+
+@keyframes Header_Transition {
+    0%{
+        transform: translateY(40px);
+        color: transparent;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.title h1{
+    font-family: Briko;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-weight: lighter;
+    display: inline-block;
+
+    animation: Header_Transition 0.6s ease-out;
+}
+
+.title h1.font1{
+    font-family: Briko;
+    font-weight: bolder;
+    margin-right: 2.5vw;
+    color: rgb(255, 158, 171);
+}
+
+@keyframes Description_Transition {
+    0%{
+        transform: translateY(60px);
+        color: transparent;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.title p{
+    font-family: Oswald;
+    margin: 3vw 5vw;
+    padding: 0;
+    font-weight: 0;
+    color: white;
+
+    animation: Description_Transition 1s ease-out;
+}
+
+@keyframes Button_Transition {
+    0%{
+        transform: translateY(100px);
+        color: transparent;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+/* Khi media lớn như pc */
+@media screen and (min-width: 801px) {
+    .title h1{
+        font-size: 150px;
+    }
+    .title p{
+        font-size: 30px;
+        margin-bottom: 17px;
+    }
+    .parallax{
+        position: absolute;
+        margin: 0;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -2;
+    }
+  }
+  @media screen and (max-width: 1225px) {
+    .title h1{
+        font-size: 130px;
+    }
+    .title p{
+        font-size: 20px;
+    }
+    .parallax{
+        right: -220px;
+    }
+  }
+  @media screen and (max-width: 1080px) {
+    .title h1{
+        font-size: 100px;
+    }
+    .title p{
+        font-size: 18;
+    }
+    .parallax{
+        right: -220px;
+    }
+  }
+
+/* Khi media nhỏ cỡ mobile */
+  @media screen and (max-width: 800px) {
+    .title{
+        text-align: left;
+    }
+    .title h1{
+        text-align: left;
+        margin-bottom: 25px;
+        font-size: 15vw;
+    }
+    .title p{
+        text-align: left;
+        margin-bottom: 25px;
+    }
+    .title h1.font1{
+        margin-left: 5vw;
+    }
+    .Logo{
+        width: 95px;
+        height: auto;
+    }
+  }
+  @media screen and (max-width: 550px){
+    .title h1{
+        margin-bottom: 25px;
+    }
+    .title p{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .title div a button{
+        width: 150px;
+        font-size: 20px;
+        margin-left: 1px;
+    }
+  }
+    </style>
+</head>
+<body>
+    <div id = "header"></div>
+    
+    <div class="container">
+        <div class="home">
+            <div class="backgroundcover"></div>
+            <img src="Assets/Images/Volunteer.jpg" class="parallax" alt="Background">
+            <div class="title">
+                <h1 class="font1">Become</h1><h1>our volunteer</h1>
+                <p>
+                    Tình nguyện viên sẽ cùng tổ chức thực hiện các hoạt động thiện nguyện gây quỹ, dạy học và tập huấn chuyên môn. <br>
+                    Để tham gia cùng chúng tôi, hãy liên hệ với tổ chức qua thông tin <b>Contact us</b> ở phía bên dưới nhé!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id = "footer"></div>
+</body>
+</html>
